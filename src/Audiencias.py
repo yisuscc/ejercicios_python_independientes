@@ -47,7 +47,21 @@ def calcula_ediciones(audiencias):
     ediciones = {t for t, s  in audiencias} #de una lista con tuplas formadas por dos elementos e y i  nos quedamos solo con e y i mediante un bucle.
     #lo convertimos a  unalista
     ediciones = list(ediciones)
-    return ediciones.sort()
+    ediciones.sort()
+    return ediciones 
+
+# versión del ejercicio, para comparar y averiguar  por que no funciona mi versíon si el cambio es mínimo
+# al parecerr no se puede integrar el sort en el return
+def calcula_ediciones_version_ejecicio(audiencias):
+  
+    # Calculamos el conjunto de ediciones presentes
+    ediciones = {e for e, _ in audiencias}
+    # Convertimos el conjunto en lista para poder ordenarlo
+    ediciones = list(ediciones)
+    # Ordenamos las ediciones
+    ediciones.sort()
+    return ediciones
+
     
     
 

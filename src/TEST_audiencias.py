@@ -6,4 +6,6 @@ Created on 15 oct. 2020
 from Audiencias import *
 fichero = ('../data/GH.csv')
 audiencias = lee_audiencias(fichero)
+print(lee_audiencias(fichero))
 print(calcula_ediciones(audiencias))
+print(calcula_ediciones_version_ejecicio(audiencias))
