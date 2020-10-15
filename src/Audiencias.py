@@ -33,5 +33,27 @@ def lee_audiencias(fichero):
             temp_y_share = (temporada, share) 
             audiencias.append(temp_y_share)
     return audiencias
+
+#2 funcion calcula ediciones
+def calcula_ediciones(audiencias):
+    '''
+    Dada una lista de tuplas con las audiencias, calcula e conjunto de ediciones presentes
+    '''
+    '''
+     1 de la lista de audiencias se coge las temporadas 
+     2 las metemos en un tipo que no admita repeticiones en este caso un conjunto (mutable,no admite repetición, NO ORDENADO, llaves)
+     3 los pasamos a una lista  y lo ordenamos con el objeto .sort()
+     '''
+    ediciones = {e for e, i in audiencias} #de una lista con tuplas formadas por dos elementos e y i  nos quedamos solo con e y i mediante un bucle.
+    #lo convertimos a  unalista
+    ediciones = list(ediciones)
+    return ediciones.sort()
+    
+    
+fichero = ('../data/GH.csv')
+audiencias = lee_audiencias(fichero)
+print(calcula_ediciones(audiencias))
+
+
          
  
