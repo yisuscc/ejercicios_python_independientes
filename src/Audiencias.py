@@ -1,7 +1,7 @@
 '''
 Created on 15 oct. 2020
 
-@author: jesus
+@author: jesus carrascosa carro
 '''
 import csv
 import statistics
@@ -13,7 +13,7 @@ from matplotlib import pyplot as plt
 el fichero contiene una columna correspondiente al nuumero de temporada 
 y al porcentaje de la audiencia. 
 '''
-fichero = ('../data/GH.csv')
+
 def lee_audiencias(fichero):
     '''
     Nos piden que hagamos una lista(corchetes y mutable) con los porcentajes del share, tenemos que separar los datos, que están divididos con comas
@@ -44,15 +44,13 @@ def calcula_ediciones(audiencias):
      2 las metemos en un tipo que no admita repeticiones en este caso un conjunto (mutable,no admite repetición, NO ORDENADO, llaves)
      3 los pasamos a una lista  y lo ordenamos con el objeto .sort()
      '''
-    ediciones = {e for e, i in audiencias} #de una lista con tuplas formadas por dos elementos e y i  nos quedamos solo con e y i mediante un bucle.
+    ediciones = {t for t, s  in audiencias} #de una lista con tuplas formadas por dos elementos e y i  nos quedamos solo con e y i mediante un bucle.
     #lo convertimos a  unalista
     ediciones = list(ediciones)
     return ediciones.sort()
     
     
-fichero = ('../data/GH.csv')
-audiencias = lee_audiencias(fichero)
-print(calcula_ediciones(audiencias))
+
 
 
          
