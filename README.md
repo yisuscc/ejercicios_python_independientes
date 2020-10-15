@@ -1,2 +1,3 @@
 # ejercicios_python_independientes
-En este no tengo tanta solvencia en el primer ejercicio, puesto que acostumbro a utilizar tuplas con nombre
+## 1ºEjercicio: lee_audiencias:
+  No tengo tanta solvencia puesto que acostumbro a utilizar tuplas con nombre

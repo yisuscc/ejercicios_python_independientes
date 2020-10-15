@@ -13,6 +13,7 @@ from matplotlib import pyplot as plt
 el fichero contiene una columna correspondiente al nuumero de temporada 
 y al porcentaje de la audiencia. 
 '''
+fichero = ('../data/GH.csv')
 def lee_audiencias(fichero):
     '''
     Nos piden que hagamos una lista(corchetes y mutable) con los porcentajes del share, tenemos que separar los datos, que están divididos con comas
@@ -32,4 +33,5 @@ def lee_audiencias(fichero):
             temp_y_share = (temporada, share) 
             audiencias.append(temp_y_share)
     return audiencias
-            
+         
+ 
