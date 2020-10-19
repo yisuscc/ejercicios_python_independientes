@@ -87,10 +87,13 @@ def medias_por_ediciones(audiencias):
         '''
         share = [s for e, s in audiencias if temporada == e]
         num_share = len(share)
-        media = sum(share)/num_share
-        media =float(media)
-        medias[temporada]= media
+       # media = sum(share)/num_share
+       #media =float(media)
+        #medias[temporada]= media
+        medias[temporada] =sum(share)/len(share)
     return medias
+
+
     
 
 
