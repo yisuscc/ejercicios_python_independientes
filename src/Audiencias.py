@@ -68,7 +68,29 @@ def filtra_por_temporadas(audiencias,temporada):
    res = [(t,s) for t,s in audiencias if t == temporada]
    return res 
 
-    
+def medias_por_ediciones(audiencias):
+    '''
+    1º Averiguamos cuantas ediciones tenemos.
+    2º Hscemos un bucle que según la  edición nos lo clasifique el share en una lista.
+    3º Calculamos los elementos de la lista y los metemos en una variable auxiliar.
+    4ªSumamos todos lo valores de la lista y los metemos en ortra variable auxiliar.
+    5ºHacemos la media y la metemos en una variable aux.
+    6º Metemos un diccionario  siendo la clave la edición y el valor la media
+    '''
+    medias = dict
+    temporada= calcula_ediciones(audiencias)
+    for temporada in temporada:
+        '''
+         No entiendo muy bien porqué me da error
+        temp_share = filtra_por_temporadas(audiencias, temporada)
+        share = [s for e,s in temp_share]
+        '''
+        share = [s for e, s in audiencias if temporada == e]
+        num_share = len(share)
+        media = sum(share)/num_share
+        media =float(media)
+        medias[temporada]= media
+    return medias
     
 
 
