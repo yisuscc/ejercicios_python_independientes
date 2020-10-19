@@ -65,7 +65,7 @@ def calcula_ediciones_version_ejecicio(audiencias):
 def filtra_por_temporadas(audiencias,temporada):
    # no sirve porque no es una namedtuple
    # res = [s for temporada, s in audiencias if audiencias.temporada == temporada]
-   res = [(t,s) for t,s in audiencias if t in temporada]
+   res = [(t,s) for t,s in audiencias if t == temporada]
    return res 
 
     
