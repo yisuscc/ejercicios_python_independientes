@@ -37,7 +37,7 @@ def lee_audiencias(fichero):
 #2 funcion calcula ediciones
 def calcula_ediciones(audiencias):
     '''
-    Dada una lista de tuplas con las audiencias, calcula e conjunto de ediciones presentes
+    Dada una lista de tuplas con las audiencias, calcula el conjunto de ediciones presentes
     '''
     '''
      1 de la lista de audiencias se coge las temporadas 
@@ -61,6 +61,12 @@ def calcula_ediciones_version_ejecicio(audiencias):
     # Ordenamos las ediciones
     ediciones.sort()
     return ediciones
+
+def filtra_por_temporadas(audiencias,temporada):
+   # no sirve porque no es una namedtuple
+   # res = [s for temporada, s in audiencias if audiencias.temporada == temporada]
+   res = [(t,s) for t,s in audiencias if t in temporada]
+   return res 
 
     
     
